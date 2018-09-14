@@ -8,6 +8,7 @@ set noeb vb t_vb=
 set shell=/bin/bash
 set t_Co=16
 let mapleader = ","
+let $PYTHONPATH='/usr/local/bin/python2.7'
 
 " Theme-ing
 syntax enable
@@ -64,6 +65,9 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 let g:UltiSnipsEditSplit="vertical"
+let g:UltiSnipsSnippetDirectories = ['~/.vim/UltiSnips', 'UltiSnips']
+
+
 
 "Emmet
 let g:user_emmet_install_global = 0
@@ -80,7 +84,12 @@ let g:prettier#autoformat = 0
 let g:prettier#config#print_width = 130
 autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue PrettierAsync
 
-
+"YouCompleteMe
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_use_ultisnips_completer = 1
+let g:ycm_key_list_select_completion=[]
+let g:ycm_key_list_previous_completion=[]
 """""""""""
 "WINDOWS + TABS
 """""""""""
